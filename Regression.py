@@ -8,7 +8,7 @@ from sklearn.preprocessing import PolynomialFeatures
 import pandas as pd
 
 # Load CSV and columns
-df = pd.read_csv("/media/sf_share/regression/Housing.csv")
+df = pd.read_csv("C:/Users/jingu1.lee/Desktop/share/MachineLearning/regression/Housing.csv")
 
 Y = df['price']
 X = df['lotsize']
@@ -17,7 +17,7 @@ X = X.values.reshape(len(X), 1)
 Y = Y.values.reshape(len(Y), 1)
 
 # For polinomial Regression
-polynomial_features = PolynomialFeatures(degree=4)
+polynomial_features = PolynomialFeatures(degree=1)
 X_poly = polynomial_features.fit_transform(X)
 
 # Split the data into training/testing sets
