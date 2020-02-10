@@ -15,7 +15,7 @@ y = iris.target
 # we create an instance of SVM and fit out data. We do not scale our
 # data since we want to plot the support vectors
 C = 1.0 # SVM regularization parameter
-svc = svm.SVC(kernel='rbf', C=1, gamma='auto')
+svc = svm.SVC(kernel='linear', C=1, gamma='auto')
 svc.fit(X, y)
 
 # create a mesh to plot in
